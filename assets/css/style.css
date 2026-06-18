@@ -1,9 +1,18 @@
 html {
     scroll-behavior: smooth;
 }
+
+#about,
+#experience,
+#expertise,
+#projects {
+    scroll-margin-top: 80px;
+}
+
 body {
-background: #FDFDFF;
-background: linear-gradient(140deg, rgba(253, 253, 255, 1) 4%, rgba(204, 204, 255, 1) 100%);
+    background: #FDFDFF;
+    background: linear-gradient(140deg, rgba(253, 253, 255, 1) 4%, rgba(204, 204, 255, 1) 100%);
+    position: relative;
 }
 
 .hero-buttons {
@@ -166,7 +175,7 @@ background: linear-gradient(140deg, rgba(253, 253, 255, 1) 4%, rgba(204, 204, 25
 }
 
 img {
-    border-radius: 25px;    
+    border-radius: 25px;
 }
 
 .carousel-item {
@@ -274,11 +283,9 @@ img {
     border-radius: inherit;
     padding: 1px;
 
-    background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.7),
-        rgba(255, 255, 255, 0.15)
-    );
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.15));
 
     -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
@@ -291,12 +298,12 @@ img {
 }
 
 .expertise-card {
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 16px;
     padding: 24px;
     cursor: pointer;
     transition: all 0.4s ease;
-    background: rgba(255,255,255,0.4);
+    background: rgba(255, 255, 255, 0.4);
 }
 
 .expertise-logos {
@@ -334,8 +341,8 @@ img {
 }
 
 .expertise-card:hover {
-    background: rgba(255,255,255,0.7);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .expertise-card:hover .expertise-details {
@@ -365,17 +372,76 @@ body::before {
     pointer-events: none;
     z-index: 0;
     opacity: 0.08;
-    background-image: 
-        linear-gradient(rgba(123,140,222,0.8) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(123,140,222,0.8) 1px, transparent 1px);
+    background-image:
+        linear-gradient(rgba(123, 140, 222, 0.8) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(123, 140, 222, 0.8) 1px, transparent 1px);
     background-size: 40px 40px;
-}
-
-body {
-    position: relative;
 }
 
 .container {
     position: relative;
     z-index: 1;
+}
+
+#mainNav {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.4s ease, opacity 0.4s ease, background 0.3s ease, box-shadow 0.3s ease;
+    padding: 8px 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+#mainNav.visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#mainNav.scrolled {
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 4px 24px rgba(75, 107, 242, 0.1);
+}
+#mainNav .navbar-brand {
+    font-size: 1.5rem;
+    color: #2b3a6b;
+    letter-spacing: -1px;
+}
+
+#mainNav .navbar-brand img {
+    height: 45px;
+    width: auto;
+}
+
+#mainNav .nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #2b3a6b;
+    padding: 6px 14px;
+    border-radius: 999px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+#mainNav .nav-link:hover {
+    background: rgba(88, 126, 251, 0.12);
+    color: #4B6BF2;
+}
+
+#mainNav .nav-link.active {
+    background: rgba(88, 126, 251, 0.15);
+    color: #4B6BF2;
+    font-weight: 600;
+}
+
+#navTrigger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    z-index: 9999;
 }

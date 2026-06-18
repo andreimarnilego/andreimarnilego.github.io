@@ -26,11 +26,32 @@
 </head>
 
 <body>
+    <div id="navTrigger"></div>
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="assets/img/Logo.svg" alt="AG Logo" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-2">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="container fade-in-section" style="height: 100vh;">
         <div class="row h-100 align-items-center justify-content-center">
 
             <div class="col-md-4 text-center">
-                <img src="assets/img/Profile.png" alt="Profile" class="img-fluid hero-profile" style="max-width: 320px;">
+                <img src="assets/img/Profile.png" alt="Profile" class="img-fluid hero-profile"
+                    style="max-width: 320px;">
             </div>
 
             <div class="col-md-6">
@@ -144,7 +165,7 @@
             </div>
         </div>
     </div>
-    <div class="container fade-in-section pt-5 mt-4">
+    <div class="container fade-in-section pt-5 mt-3" id="experience">
         <div class="glass-card p-4" style="font-family: 'Roboto';">
             <div class="row">
                 <div class="col-2 d-flex align-items-center justify-content-center" style="min-height: 500px;">
@@ -245,7 +266,7 @@
                 </div>
             </div>
         </div>
-        <div class="container fade-in-section pt-5 mt-4 ps-3">
+        <div class="container fade-in-section pt-5 mt-4 ps-3" id="expertise">
             <div class="glass-card p-4">
                 <h1 class="fw-bold" style="font-size: 5rem;">Expertise</h1>
                 <div class="row mt-4 g-3">
@@ -257,7 +278,8 @@
                                 <div class="expertise-logo"><img src="./assets/img/html.png" alt=""><span></span></div>
                                 <div class="expertise-logo"><img src="./assets/img/css.png" alt=""><span></span></div>
                                 <div class="expertise-logo"><img src="./assets/img/js.png" alt=""><span></span></div>
-                                <div class="expertise-logo"><img src="./assets/img/python.png" alt=""><span></span></div>
+                                <div class="expertise-logo"><img src="./assets/img/python.png" alt=""><span></span>
+                                </div>
                                 <div class="expertise-logo"><img src="./assets/img/mysql.png" alt=""><span></span></div>
                             </div>
                             <div class="expertise-details">
@@ -273,7 +295,8 @@
                             <h5 class="fw-bold">Database Management</h5>
                             <div class="expertise-logos">
                                 <div class="expertise-logo"><img src="./assets/img/mysql.png" alt=""><span></span></div>
-                                <div class="expertise-logo"><img src="./assets/img/SQLITE.png" alt=""><span></span></div>
+                                <div class="expertise-logo"><img src="./assets/img/SQLITE.png" alt=""><span></span>
+                                </div>
                             </div>
                             <div class="expertise-details">
                                 Proficient in designing and managing relational databases using MySQL and SQLite, with
@@ -287,9 +310,11 @@
                             <h5 class="fw-bold">Tools</h5>
                             <div class="expertise-logos">
                                 <div class="expertise-logo"><img src="./assets/img/git.png" alt=""><span></span></div>
-                                <div class="expertise-logo"><img src="./assets/img/github.png" alt=""><span></span></div>
+                                <div class="expertise-logo"><img src="./assets/img/github.png" alt=""><span></span>
+                                </div>
                                 <div class="expertise-logo"><img src="./assets/img/figma.png" alt=""><span></span></div>
-                                <div class="expertise-logo"><img src="./assets/img/vscode.png" alt=""><span></span></div>
+                                <div class="expertise-logo"><img src="./assets/img/vscode.png" alt=""><span></span>
+                                </div>
                                 <div class="expertise-logo"><img src="./assets/img/xampp.png" alt=""><span></span></div>
                             </div>
                             <div class="expertise-details">
@@ -310,7 +335,7 @@
                                 <div class="expertise-logo"><img src="./assets/img/php.png" alt=""><span></span></div>
                                 <div class="expertise-logo"><img src="./assets/img/mysql.png" alt=""><span></span></div>
                             </div>
-                            
+
                             <div class="expertise-details">
                                 Built multiple desktop and web-based management systems with full CRUD functionality,
                                 applying object-oriented programming principles, and software testing and
@@ -429,23 +454,89 @@
             <h1 class="fw-bold text-center" style="font-size: 8rem; letter-spacing: -5px;">Andrei Gabriel</h1>
 
             <p class="text-center" style="font-size: 0.85rem;">©2026 Andrei Gabriel All rights reserved</p>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-    <script>
-        const fadeSections = document.querySelectorAll('.fade-in-section');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.15 });
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+        <script>
+            const fadeSections = document.querySelectorAll('.fade-in-section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
 
-        fadeSections.forEach(section => observer.observe(section));
-    </script>
+            fadeSections.forEach(section => observer.observe(section));
+
+            const nav = document.getElementById('mainNav');
+            let scrollTimeout;
+            let lastScrollY = 0;
+
+            window.addEventListener('scroll', () => {
+                const currentScrollY = window.scrollY;
+
+                if (currentScrollY > 50) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+
+                if (currentScrollY > 100) {
+                    nav.classList.add('visible');
+                }
+
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    nav.classList.remove('visible');
+                }, 1500);
+            });
+
+            const navTrigger = document.getElementById('navTrigger');
+
+            navTrigger.addEventListener('mouseenter', () => {
+                clearTimeout(scrollTimeout);
+                nav.classList.add('visible');
+            });
+
+            nav.addEventListener('mouseenter', () => {
+                clearTimeout(scrollTimeout);
+                nav.classList.add('visible');
+            });
+
+            nav.addEventListener('mouseleave', () => {
+                scrollTimeout = setTimeout(() => {
+                    nav.classList.remove('visible');
+                }, 1500);
+            });
+
+            navTrigger.addEventListener('mouseleave', () => {
+                scrollTimeout = setTimeout(() => {
+                    nav.classList.remove('visible');
+                }, 1500);
+            });
+            const sections = document.querySelectorAll('div[id], section[id]');
+            const navLinks = document.querySelectorAll('#mainNav .nav-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    if (window.scrollY >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        </script>
 </body>
 
 </html>
